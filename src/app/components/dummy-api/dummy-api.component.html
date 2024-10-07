@@ -1,0 +1,71 @@
+<button (click)="getQuote()">get Quote</button>
+<h4>ID</h4>
+{{id}}
+<h4>Quote</h4>
+{{quote}}
+<h4>Author</h4>
+{{author}}
+
+
+<button (click)="getallpost()">Get All Posts</button>
+<h2>List of Posts</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of allpost">
+           <td>{{p.id}}</td>
+           <td>{{p.title}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+<button (click)="getallproducts()">get all products</button>
+
+<h2>List of Products</h2>
+<button (click)="getallproducts()">get all products</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of allproducts">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price | currency }}</td>
+            <td>{{ product.description }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h4>list of albums</h4>
+<button (click)="getallalbums()">get all albums</button>
+<table border="1">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>ID</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allalbums">
+        <td>{{ userId }}</td>
+        <td>{{ id }}</td>
+        <td>{{ title }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
